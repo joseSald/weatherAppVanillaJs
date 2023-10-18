@@ -1,4 +1,3 @@
-//https://api.openweathermap.org/data/2.5/weather?q=berlin&appid=aa14a7116e7bb7d97cdfa4e5c760d76e&units=metric
 const apiKey = 'aa14a7116e7bb7d97cdfa4e5c760d76e';
 const apiUrl =
   'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
@@ -14,8 +13,6 @@ async function checkWeather(city) {
     document.querySelector('.weather').style.display = 'none';
   } else {
     let data = await response.json();
-    console.log(data);
-    console.log(data.main.humidity);
 
     document.querySelector('.city').innerHTML = data.name;
     document.querySelector('.temp').innerHTML =
